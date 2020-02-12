@@ -28,6 +28,9 @@ namespace EmployeeApp
             Console.WriteLine($"Method: {mark.GetBenefitsCost()}");
             Console.WriteLine($"Property: {mark.BenefitsCost}");
 
+            mark.GiveBonus(100);
+            Console.WriteLine($"Pay after bonus: {mark.Pay}");
+
             Console.WriteLine
             (
                 "\n--------------" +

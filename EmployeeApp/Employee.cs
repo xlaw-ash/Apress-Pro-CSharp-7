@@ -36,7 +36,7 @@ namespace EmployeeApp
         }
         public float Pay
         {
-            get { return empID; }
+            get { return currPay; }
             set { currPay = value; }
         }
         public int Age { get; set; } // Auto Property is used when there is no logic in get and set.
@@ -62,7 +62,7 @@ namespace EmployeeApp
         }
 
         // Methods
-        public void GiveBonus(float amount)
+        public virtual void GiveBonus(float amount)
         {
             currPay += amount;
         }
