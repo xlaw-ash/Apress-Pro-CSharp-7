@@ -23,6 +23,11 @@ namespace BasicInheritance
             myCar.Speed = 90;
             Console.WriteLine($"Car Speed: {myCar.Speed} MPH");
 
+            // Now make a Minivan object
+            MiniVan myVan = new MiniVan();
+            myVan.Speed = 10;
+            Console.WriteLine($"MiniVan Speed: {myVan.Speed} MPH");
+
             Console.WriteLine
             (
                 "\n--------------" +

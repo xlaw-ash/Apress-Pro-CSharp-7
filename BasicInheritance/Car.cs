@@ -29,5 +29,9 @@ namespace BasicInheritance
         {
             maxSpeed = max;
         }
+        public Car()
+        {
+            maxSpeed = 100;
+        }
     }
 }
