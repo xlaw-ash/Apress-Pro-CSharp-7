@@ -8,8 +8,8 @@ namespace SimpleClassExample
         {
             Console.WriteLine
             (
-                "--------------------" +
-                "\nFun With Class Types\n" +
+                "--------------------\n" +
+                "Fun With Class Types\n" +
                 "--------------------\n"
             );
             
