@@ -37,16 +37,18 @@ namespace EmployeeApp
             get { return empID; }
             set { currPay = value; }
         }
+        public int Age { get; set; } // Auto Property is used when there is no logic in get and set.
 
         // Constructors
         public Employee() { }
-        public Employee(string name, int id, float pay)
+        public Employee(string name, int id, int age, float pay)
         {
             // Use properties in constructors for get and set logic
             // instead of implementing that logic in constructor
             Name = name;
             ID = id;
             Pay = pay;
+            Age = age;
         }
 
         // Methods
@@ -58,6 +60,7 @@ namespace EmployeeApp
         {
             Console.WriteLine($"Name: {empName}");
             Console.WriteLine($"ID: {empID}");
+            Console.WriteLine($"Age: {Age}");
             Console.WriteLine($"Pay: {currPay}");
         }
     }

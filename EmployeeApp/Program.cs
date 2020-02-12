@@ -13,12 +13,12 @@ namespace EmployeeApp
                 "-----------------------\n"
             );
 
-            Employee emp = new Employee("Mark", 101, 12000);
+            Employee emp = new Employee("Mark", 101, 32, 12000);
             emp.GiveBonus(1000);
             emp.DisplayState();
 
             //Reset and get the Name property
-            emp.Name = "John";
+            emp.Name = "John";            
             Console.WriteLine($"\nChanged the name to {emp.Name}");
             emp.DisplayState();
 
