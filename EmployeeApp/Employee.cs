@@ -10,6 +10,7 @@ namespace EmployeeApp
         private string empName;
         private int empID;
         private float currPay;
+        public readonly string empSSN;
 
         //Properties!
         public string Name
@@ -49,6 +50,10 @@ namespace EmployeeApp
             ID = id;
             Pay = pay;
             Age = age;
+        }
+        public Employee(string name, int id, int age, float pay, string ssn) : this(name, id, age, pay)
+        {
+            empSSN = ssn;
         }
 
         // Methods

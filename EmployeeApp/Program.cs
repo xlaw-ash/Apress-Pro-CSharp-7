@@ -8,19 +8,21 @@ namespace EmployeeApp
         {
             Console.WriteLine
             (
-                "-----------------------\n" +
-                "Fun With Employee Class\n" +
-                "-----------------------\n"
+                "----------------------------\n" +
+                "The Employee Class Hierarchy\n" +
+                "----------------------------\n"
             );
 
-            Employee emp = new Employee("Mark", 101, 32, 12000);
-            emp.GiveBonus(1000);
-            emp.DisplayState();
-
-            //Reset and get the Name property
-            emp.Name = "John";            
-            Console.WriteLine($"\nChanged the name to {emp.Name}");
-            emp.DisplayState();
+            SalesPerson mark = new SalesPerson("Mark", 101, 32, 30000, "123-456-7890", 70);
+            Console.WriteLine
+            (
+                $"Name:\t{mark.Name}\n" +
+                $"ID:\t{mark.ID}\n" +
+                $"Age:\t{mark.Age}\n" +
+                $"Pay:\t{mark.Pay}\n" +
+                $"SSN:\t{mark.empSSN}\n" +
+                $"Sales:\t{mark.SalesNumber}"
+            );
 
             Console.WriteLine
             (
