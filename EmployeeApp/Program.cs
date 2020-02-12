@@ -24,6 +24,10 @@ namespace EmployeeApp
                 $"Sales:\t{mark.SalesNumber}"
             );
 
+            Console.WriteLine("Two ways to call BenefitPackage's ComputePayDeduction method: ");
+            Console.WriteLine($"Method: {mark.GetBenefitsCost()}");
+            Console.WriteLine($"Property: {mark.BenefitsCost}");
+
             Console.WriteLine
             (
                 "\n--------------" +

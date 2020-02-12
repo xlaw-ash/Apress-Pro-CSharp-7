@@ -11,6 +11,7 @@ namespace EmployeeApp
         private int empID;
         private float currPay;
         public readonly string empSSN;
+        protected BenefitPackage empBenefits = new BenefitPackage();
 
         //Properties!
         public string Name
@@ -39,6 +40,10 @@ namespace EmployeeApp
             set { currPay = value; }
         }
         public int Age { get; set; } // Auto Property is used when there is no logic in get and set.
+        public double BenefitsCost
+        {
+            get { return empBenefits.ComputePayDeduction(); }
+        }
 
         // Constructors
         public Employee() { }
@@ -67,6 +72,10 @@ namespace EmployeeApp
             Console.WriteLine($"ID: {empID}");
             Console.WriteLine($"Age: {Age}");
             Console.WriteLine($"Pay: {currPay}");
+        }
+        public double GetBenefitsCost()
+        {
+            return empBenefits.ComputePayDeduction();
         }
     }
 }
