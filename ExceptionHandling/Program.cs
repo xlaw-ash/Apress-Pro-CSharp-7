@@ -67,6 +67,72 @@ namespace ExceptionHandling
                 Console.WriteLine(e.Message);
             }
 
+            // Sometimes, a process is running in try block and due to some exception, the program exits try block without closing that process.
+            // For example, reading a file in try block. If some exception occurs, the file will remain open.
+            // File will not close until it is explicitly closed with proper method.
+            // To avoid this situation, finally is used. Let's see a simple example.
+            // Car is moving at certain speed. If car speed crosses maximum speed, the engine breaks.
+
+            Car myCar = new Car(60, true);
+            try
+            {                
+                for(int i = 0; i <= 5; i++) { myCar.Speed += 10; }
+                Console.WriteLine("You have reached your destination.");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            Console.WriteLine($"Radio of myCar: {((myCar.Radio) ? "On" : "Off")}");
+            // Note that Car's radio is on. This is a problem because Car's radio should automatically switch off when car breaks.
+            // Use finally to handle this problem.            
+            myCar.Speed = 60;
+            myCar.Radio = true;
+            try
+            {
+                for (int i = 0; i <= 5; i++) { myCar.Speed += 10; }
+                Console.WriteLine("You have reached your destination.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                myCar.Radio = false;
+            }
+            Console.WriteLine($"Radio of myCar: {((myCar.Radio) ? "On" : "Off")}");
+            // Car's radio is now off. finally is used when a process must happen, irrespective of exception.
+
+            // Sometimes, user wants an exception only when a certain condition is met.
+            // Suppose car has a Safe mode which doesn't let it break.
+
+            myCar.Speed = 60;
+            myCar.Radio = true;
+            myCar.Safe = true;
+
+            try
+            {
+                for (int i = 0; i <= 5; i++) { myCar.Speed += 10; }
+                Console.WriteLine("You have reached your destination.");
+            }
+            catch (Exception e) when (myCar.Safe) // When car is in Safe mode, execute this message.
+            {                
+                Console.WriteLine("You have reached your destination.");
+                Console.WriteLine("You are lucky that car did not break due to Safe mode. Please drive carefully next time.");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                myCar.Radio = false;
+            }
+
+            // This example of when is not a good one, but remember that when clause is used to execute exception statements in certain condition.
+
+
             Console.WriteLine
             (
                 "\n--------------" +
