@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterations", "Iterations\It
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloning", "Cloning\Cloning.csproj", "{FAFAC162-E270-4B32-B8B7-C4813CA1DCE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparables", "Comparables\Comparables.csproj", "{1098FA85-6CE5-4A4B-814B-A9465A25BADB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{FAFAC162-E270-4B32-B8B7-C4813CA1DCE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAFAC162-E270-4B32-B8B7-C4813CA1DCE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAFAC162-E270-4B32-B8B7-C4813CA1DCE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1098FA85-6CE5-4A4B-814B-A9465A25BADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1098FA85-6CE5-4A4B-814B-A9465A25BADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1098FA85-6CE5-4A4B-814B-A9465A25BADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1098FA85-6CE5-4A4B-814B-A9465A25BADB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
