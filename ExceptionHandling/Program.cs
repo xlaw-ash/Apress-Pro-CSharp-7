@@ -43,6 +43,30 @@ namespace ExceptionHandling
                 Console.WriteLine($"Error: {e.Message}");
             }
 
+            // C# provides a lot of in-built exceptions and you can throw your own exception message as per need of application.            
+            
+            Console.Write("Enter a multiple of 10: ");
+            // Instead of using if-else statements, we can use custom exception message
+            try { num = int.Parse(Console.ReadLine()); PrintMultipleOfTen(num); }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            // This was is alright, but it doesn't provide a good understanding of exception.
+            // We can also create custom exception class which inherits ApplicationException class.
+            // Suppose your application accepts only VIBGYOR colors. (Violet, Indigo, Blue, Green, Yellow, Orange, Red)
+            try
+            {
+                Console.Write("Enter a color: ");
+                string color = Console.ReadLine();
+                PrintColor(color);
+            }
+            catch(ColorInRainbowException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
             Console.WriteLine
             (
                 "\n--------------" +
@@ -51,6 +75,32 @@ namespace ExceptionHandling
             );
             Console.WriteLine("Press any key to continue");
             Console.ReadKey();
+        }
+
+        static void PrintColor(string color)
+        {
+            ColorInRainbowException e = new ColorInRainbowException(color);
+            string[] colors = new string[] { "violet", "indigo", "blue", "green", "yellow", "orange", "red" };
+            if (!Array.Exists<string>(colors, x => x == color))
+            {
+                throw e;
+            }
+            else
+            {
+                Console.WriteLine(color);
+            }
+        }
+
+        static void PrintMultipleOfTen(int num)
+        {
+            if(num % 10 != 0)
+            {
+                throw new Exception(message: $"Error: {num} is not a multiple of 10");
+            }
+            else
+            {
+                Console.WriteLine(num);
+            }
         }
     }
 }
