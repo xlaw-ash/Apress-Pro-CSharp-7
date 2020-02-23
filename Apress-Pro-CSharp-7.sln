@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaExpressions", "Lambda
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQueries", "LINQueries\LINQueries.csproj", "{913DE9A1-5186-43AC-9645-24EE7D353691}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelProgramming", "ParallelProgramming\ParallelProgramming.csproj", "{19FDA4C9-EE9C-4BF9-95A4-8AE5F6D4C425}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{913DE9A1-5186-43AC-9645-24EE7D353691}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{913DE9A1-5186-43AC-9645-24EE7D353691}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{913DE9A1-5186-43AC-9645-24EE7D353691}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19FDA4C9-EE9C-4BF9-95A4-8AE5F6D4C425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19FDA4C9-EE9C-4BF9-95A4-8AE5F6D4C425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19FDA4C9-EE9C-4BF9-95A4-8AE5F6D4C425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19FDA4C9-EE9C-4BF9-95A4-8AE5F6D4C425}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
